@@ -6,7 +6,7 @@ const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPl
 const deps = require("./package.json").dependencies;
 module.exports = {
   output: {
-    publicPath: "http://localhost:3001/",
+    publicPath: "https://micro-frontend-module.vercel.app/",
   },
 
   resolve: {
@@ -52,7 +52,7 @@ module.exports = {
       name: "nav",
       filename: "remoteEntry.js",
       remotes: {
-        store: "store@http://localhost:3002/remoteEntry.js",
+        store: "store@https://micro-frontend-store-seven.vercel.app/remoteEntry.js",
       },
       exposes: {
         "./Header": "./src/Header",
